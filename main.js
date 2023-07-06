@@ -20,3 +20,12 @@ const prefixs = [
   "Na 100% twierdzę",
   "Jestem pewien",
 ];
+
+const showMessage = () => {
+  const numberName = Math.floor(Math.random() * names.length);
+  const numberPrefix = Math.floor(Math.random() * prefixs.length);
+
+  div.textContent = `${prefixs[numberPrefix]}, że najlepsze imię to ${names[numberName]}`;
+};
+
+btn.addEventListener("click", showMessage);
